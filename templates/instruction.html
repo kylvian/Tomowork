@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Instructions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="bg-image">
+  <div class="page spaced">
+
+    <!-- TOP HALF -->
+    <div class="row half">
+      <img src="{{ url_for('static', filename='cat2.png') }}" class="cat">
+
+      <div class="card center-text">
+        <p>
+           Follow the pawprints on the floor<br>
+          for gentle guidance
+        </p>
+      </div>
+    </div>
+
+    <!-- BOTTOM HALF -->
+    <div class="row half reverse">
+      <img src="{{ url_for('static', filename='cat3.png') }}" class="cat">
+
+      <div class="card center-text">
+        <p>
+           Tap your phone on cat-shaped stickers<br>
+          for help — explanations, directions,<br>
+          or a quiet space
+        </p>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

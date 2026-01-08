@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome</title>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="bg-image">
+  <!-- Paw overlay -->
+  <div class="paw-overlay">
+    <img src="{{ url_for('static', filename='paw.png') }}" class="paw paw1">
+    <img src="{{ url_for('static', filename='paw.png') }}" class="paw paw2">
+    <img src="{{ url_for('static', filename='paw.png') }}" class="paw paw3">
+  </div>
+
+  <div class="page center">
+    <div class="row">
+      <img src="{{ url_for('static', filename='cat1.png') }}" class="cat">
+
+      <div class="card left-text">
+        <h2>Welcome, Traveller</h2>
+        <p>This is Neko, your guide for the tour</p>
+
+        <button class="big" onclick="goNext()">Let’s Go!</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function goNext() {
+      document.body.classList.add("show-paws");
+      setTimeout(() => {
+        window.location.href = "{{ url_for('instructions') }}";
+      }, 1200);
+    }
+  </script>
+</body>
+</html>
